@@ -1,7 +1,7 @@
 module.exports = {
     user: 'root',
     password:  '123',
-    connectString:  '47.101.188.184',
+    connectString:  '127.0.0.1',
     database : 'stock'
 }
 
