@@ -1,5 +1,5 @@
 module.exports = {
-    connectString:  '127.0.0.1',
+    connectString:  '47.101.188.184',
     port:           '6379'
 
 }
