@@ -1,9 +1,7 @@
-import {ProductDAO} from '../models/mysql/stock-model.js'
-import moment from 'moment';
-import fs from 'fs';
-import path from 'path';
+import {ProductDAO} from '../models/stock-model.js'
 import request from 'request-promise';
 import regeneratorRuntime from '../node_modules/regenerator-runtime/runtime.js';
+import mailService from "./mail-service";
 
 'use strict';
 
@@ -32,5 +30,9 @@ exports.getStockInfo = async (code) =>{
         throw "错误异常"
     })
     await ProductDAO.insert(stockInfo)
+
+    let recipient = "584707735@qq.com"
+    let subject = "测试使用"
+    await mailService.mailNotifier(recipient,subject,stockInfo)
     return retInfo
 }
