@@ -805,3 +805,7 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+
+### config ###
+./config/mysql_config.js
+./config/redis_config.js
