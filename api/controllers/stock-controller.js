@@ -5,9 +5,10 @@ import regeneratorRuntime from '../node_modules/regenerator-runtime/runtime.js';
 
 exports.getStockInfo = async function (req,res) {
     console.log("req------------",req.query)
-    let stockCode = req.query.code
+    let stockCode = req.query.stockCode
+    let stockName = req.query.stockName
     try{
-        let result =  await stockService.getStockInfo(stockCode)
+        let result =  await stockService.getStockInfo(stockCode,stockName)
         ResultFul.success(result,res)
     }
    catch (err) {

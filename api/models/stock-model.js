@@ -9,7 +9,7 @@ const mysql_connection = mysql.createConnection({
     host     : mysqlConfig.connectString,
     user     : mysqlConfig.user,
     password : mysqlConfig.password,
-    database : mysqlConfig.database
+    database : mysqlConfig.stock_database
 });
 
 const redis_connection = redis.createClient( {
