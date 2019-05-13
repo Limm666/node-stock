@@ -1,11 +1,3 @@
-/**
- * Vue Router
- *
- * @library
- *
- * https://router.vuejs.org/en/
- */
-
 // Lib imports
 import Vue from 'vue'
 import VueAnalytics from 'vue-analytics'
